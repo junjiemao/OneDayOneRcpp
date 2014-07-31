@@ -2,6 +2,18 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rcpp_hello_world <- function() {
-    .Call('oneDoneRcpp_rcpp_hello_world', PACKAGE = 'oneDoneRcpp')
+    .Call('OneDayOneRcpp_rcpp_hello_world', PACKAGE = 'OneDayOneRcpp')
+}
+
+positives <- function(x) {
+    .Call('OneDayOneRcpp_positives', PACKAGE = 'OneDayOneRcpp', x)
+}
+
+first_three <- function(x) {
+    .Call('OneDayOneRcpp_first_three', PACKAGE = 'OneDayOneRcpp', x)
+}
+
+with_names <- function(x, y) {
+    .Call('OneDayOneRcpp_with_names', PACKAGE = 'OneDayOneRcpp', x, y)
 }
 

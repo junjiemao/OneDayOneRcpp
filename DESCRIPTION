@@ -1,11 +1,11 @@
-Package: oneDoneRcpp
+Package: OneDayOneRcpp
 Type: Package
-Title: One Day One Rcpp
+Title: One Day One Rcpp Program
 Version: 1.0
-Date: 2014-07-30
+Date: 2014-07-31
 Author: HatMatrix
-Maintainer: HatMatrix<HatMatrix42@gmail.com>
-Description: learn to write Rcpp
+Maintainer: HatMatrix <HatMatrix42@gmail.com>
+Description: leran write Rcpp program,exanple from http://gallery.rcpp.org/
 Imports:
     Rcpp (>= 0.11.2)
 LinkingTo: Rcpp

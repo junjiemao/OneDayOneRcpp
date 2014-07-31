@@ -7,12 +7,58 @@ using namespace Rcpp;
 
 // rcpp_hello_world
 List rcpp_hello_world();
-RcppExport SEXP oneDoneRcpp_rcpp_hello_world() {
+RcppExport SEXP OneDayOneRcpp_rcpp_hello_world() {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
         List __result = rcpp_hello_world();
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// positives
+NumericVector positives(NumericVector x);
+RcppExport SEXP OneDayOneRcpp_positives(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP );
+        NumericVector __result = positives(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// first_three
+List first_three(List x);
+RcppExport SEXP OneDayOneRcpp_first_three(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        List __result = first_three(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// with_names
+List with_names(List x, CharacterVector y);
+RcppExport SEXP OneDayOneRcpp_with_names(SEXP xSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        Rcpp::traits::input_parameter< CharacterVector >::type y(ySEXP );
+        List __result = with_names(x, y);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);

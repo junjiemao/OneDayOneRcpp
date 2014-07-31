@@ -8,4 +8,8 @@ helloWorld()
 \description{
 hello world
 }
+\author{
+hatmatrix42
+}
+\keyword{helloWorld}
 
