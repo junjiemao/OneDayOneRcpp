@@ -3,5 +3,6 @@
 .RData
 .dll
 .o
+.so
 ^.*\.Rproj$
 ^\.Rproj\.user$
