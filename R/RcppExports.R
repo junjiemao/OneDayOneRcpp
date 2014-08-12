@@ -26,6 +26,14 @@ rcpp_hello_world <- function() {
     .Call('OneDayOneRcpp_rcpp_hello_world', PACKAGE = 'OneDayOneRcpp')
 }
 
+#' @export
+#' @title 测试cpp中的lamda
+#' @name lamda
+#' @param x 需要转化的函数
+transformEx <- function(x) {
+    .Call('OneDayOneRcpp_transformEx', PACKAGE = 'OneDayOneRcpp', x)
+}
+
 split_indices <- function(x, n = 0L) {
     .Call('OneDayOneRcpp_split_indices', PACKAGE = 'OneDayOneRcpp', x, n)
 }

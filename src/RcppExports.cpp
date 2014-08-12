@@ -65,6 +65,21 @@ BEGIN_RCPP
     return __sexp_result;
 END_RCPP
 }
+// transformEx
+std::vector<double> transformEx(const std::vector<double>& x);
+RcppExport SEXP OneDayOneRcpp_transformEx(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< const std::vector<double>& >::type x(xSEXP );
+        std::vector<double> __result = transformEx(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // split_indices
 std::vector<std::vector<int> > split_indices(IntegerVector x, int n = 0);
 RcppExport SEXP OneDayOneRcpp_split_indices(SEXP xSEXP, SEXP nSEXP) {
