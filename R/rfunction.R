@@ -1,6 +1,6 @@
 #'@importFrom  Rcpp  evalCpp
 #'@useDynLib OneDayOneRcpp
-NULL
+NULL  #useDynLib is import!!!
 
 #'@export
 #'@title hello world
@@ -29,3 +29,13 @@ subset_first_three <- function(x){
 subset_with_names <- function(x,names){
   with_names(x,names)
 } 
+
+#'@export
+rcpp_split_indices <- function(group,n=0){
+  split_indices(group,n)
+}
+
+#'@export
+rcpp_Normals <- function(n){
+  rcppNormals(n)
+}

@@ -5,6 +5,52 @@
 
 using namespace Rcpp;
 
+// rcppNormals
+NumericVector rcppNormals(int n);
+RcppExport SEXP OneDayOneRcpp_rcppNormals(SEXP nSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< int >::type n(nSEXP );
+        NumericVector __result = rcppNormals(n);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// boostNormals
+NumericVector boostNormals(int n);
+RcppExport SEXP OneDayOneRcpp_boostNormals(SEXP nSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< int >::type n(nSEXP );
+        NumericVector __result = boostNormals(n);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// cxx11Normals
+NumericVector cxx11Normals(int n, int seed = 42);
+RcppExport SEXP OneDayOneRcpp_cxx11Normals(SEXP nSEXP, SEXP seedSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< int >::type n(nSEXP );
+        Rcpp::traits::input_parameter< int >::type seed(seedSEXP );
+        NumericVector __result = cxx11Normals(n, seed);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP OneDayOneRcpp_rcpp_hello_world() {
@@ -13,6 +59,22 @@ BEGIN_RCPP
     {
         Rcpp::RNGScope __rngScope;
         List __result = rcpp_hello_world();
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// split_indices
+std::vector<std::vector<int> > split_indices(IntegerVector x, int n = 0);
+RcppExport SEXP OneDayOneRcpp_split_indices(SEXP xSEXP, SEXP nSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< IntegerVector >::type x(xSEXP );
+        Rcpp::traits::input_parameter< int >::type n(nSEXP );
+        std::vector<std::vector<int> > __result = split_indices(x, n);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);
