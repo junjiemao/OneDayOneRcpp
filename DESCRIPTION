@@ -7,5 +7,5 @@ Author: HatMatrix
 Maintainer: HatMatrix <HatMatrix42@gmail.com>
 Description: leran write Rcpp program,exanple from http://gallery.rcpp.org/
 Imports:
-    Rcpp (>= 0.11.2)
-LinkingTo: Rcpp
+    Rcpp (>= 0.11.2),RcppParallel
+LinkingTo: Rcpp,RcppParallel

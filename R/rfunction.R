@@ -1,4 +1,5 @@
-#'@importFrom  Rcpp  evalCpp
+#'@importFrom  Rcpp  evalCpp 
+#'@import RcppParallel
 #'@useDynLib OneDayOneRcpp
 NULL  #useDynLib is import!!!
 

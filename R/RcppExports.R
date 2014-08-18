@@ -38,6 +38,24 @@ split_indices <- function(x, n = 0L) {
     .Call('OneDayOneRcpp_split_indices', PACKAGE = 'OneDayOneRcpp', x, n)
 }
 
+#' @export
+#' @name innerProduct
+#' @title 内积的cpp版本
+#' @param x 向量x
+#' @param y 向量y
+innerProduct <- function(x, y) {
+    .Call('OneDayOneRcpp_innerProduct', PACKAGE = 'OneDayOneRcpp', x, y)
+}
+
+#' @export
+#' @title 内积的并行版本
+#' @param x,向量x
+#' @param y,向量y
+#' @name parallelInnerProduct
+parallelInnerProduct <- function(x, y) {
+    .Call('OneDayOneRcpp_parallelInnerProduct', PACKAGE = 'OneDayOneRcpp', x, y)
+}
+
 positives <- function(x) {
     .Call('OneDayOneRcpp_positives', PACKAGE = 'OneDayOneRcpp', x)
 }
