@@ -80,6 +80,21 @@ BEGIN_RCPP
     return __sexp_result;
 END_RCPP
 }
+// parallelJsDistance
+NumericMatrix parallelJsDistance(NumericMatrix mat);
+RcppExport SEXP OneDayOneRcpp_parallelJsDistance(SEXP matSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< NumericMatrix >::type mat(matSEXP );
+        NumericMatrix __result = parallelJsDistance(mat);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // split_indices
 std::vector<std::vector<int> > split_indices(IntegerVector x, int n = 0);
 RcppExport SEXP OneDayOneRcpp_split_indices(SEXP xSEXP, SEXP nSEXP) {

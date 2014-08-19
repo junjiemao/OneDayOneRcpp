@@ -34,6 +34,11 @@ transformEx <- function(x) {
     .Call('OneDayOneRcpp_transformEx', PACKAGE = 'OneDayOneRcpp', x)
 }
 
+#' @export
+parallelJsDistance <- function(mat) {
+    .Call('OneDayOneRcpp_parallelJsDistance', PACKAGE = 'OneDayOneRcpp', mat)
+}
+
 split_indices <- function(x, n = 0L) {
     .Call('OneDayOneRcpp_split_indices', PACKAGE = 'OneDayOneRcpp', x, n)
 }
